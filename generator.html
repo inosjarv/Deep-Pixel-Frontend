@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/generator.css">
     <link rel="icon" href="assets/img/logo_32x32.png" sizes="32x32" type="image/png">
-    <title>Deep Pixels</title>
+    <title>Deep Pixels | Generate</title>
 </head>
 <body>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="assets/img/logo.png" class="logo" alt="">
@@ -31,50 +33,54 @@
 
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item mr-3">
+                  <a href="./generator.html" class="nav-link text-dark"><i class="fas fa-upload"></i> Generate</a>
+                </li>
+                <li class="nav-item mr-3">
                     <a class="nav-link text-dark" href="./about.html">
-                    <i class=""></i>About Us</a>
+                    <i class="fas fa-user"></i> About Us</a>
                 </li>
                 <li class="nav-item mr-3">
                     <a class="nav-link text-dark" href="./contact.html">
-                    <i class=""></i>Contact</a>
+                    <i class="fas fa-phone"></i> Contact</a>
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="generators">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="left active"><a href="#generator-tab-1" aria-controls="generator-tab-1" role="tab" data-toggle="tab" aria-expanded="true">
-                    Deep Style
-                </a></li>
-                <li role="presentation" class=""><a href="#generator-tab-2" aria-controls="generator-tab-2" role="tab" data-toggle="tab" aria-expanded="false">
-                    Thin Style
-                </a></li>
-                <li role="presentation" class="right"><a href="#generator-tab-3" aria-controls="generator-tab-3" role="tab" data-toggle="tab" aria-expanded="false">
-                    Deep Dream
-                </a></li>
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="generator-tab-1">
-                    <form id="form-deep-style"
-        action="https://deepdreamgenerator.com/generator/upload-image" method="post" enctype="multipart/form-data"
-        class="generator-form"
-    >
-        <input type="hidden" name="_token" value="75vOcoQo7HOPaHZdlUfh3cfVcmZ549xJaBcbFByg">
+    <section class="jumbotron text-center jumbotron-color">
+        <div class="file btn btn-lg btn-dark center-block">
+						 <i class="fas fa-upload"></i> Upload Image!
+							<input type="file" id="upload-file-info" class="form-control" name="file"/>
+		</div>
+    </section>
 
-        <div class="main-form-wrapper">
-            <div class="panel panel-default generator-settings generator-settings-styles">
-    <div class="panel-heading" role="tab" id="heading-styles">
-        <h4 class="panel-title">
-            <a class="" role="button" data-toggle="collapse" data-parent="#accordion-styles" href="#collapse-styles" aria-expanded="true" aria-controls="collapse-styles">
-                Choose Style
-                <!-- <span data-toggle="modal" data-target="#dstyle-help-style-image" class="help-button">
-                   <i class="fa fa-question"></i>
-                </span> -->
+    <div class="container">
+       <!--
+            <div class="list-group-horizontal list-group-horizontal-xl">
+            <a href="#" class="list-group-item text-dark">Deep Style Transfer</a>
+            <a href="#" class="list-group-item text-dark">Deep Dream</a>
+            <a href="#" class="list-group-item text-dark">Artistic Style Transfer</a>
+            <div class="w-100"></div>
+            <a href="#" class="list-group-item text-dark">Season Transfer</a>
+            <a href="#" class="list-group-item text-dark">Season Transfer</a>
+        </div>
+       --> 
 
-            </a>
-        </h4>
+        <table class="table table-bordered">
+
+            <tbody>
+                <tr>
+                <td><a href="#deepstyletransfer" class="text-dark">Deep Style Transfer</a></td>
+                <td><a href="#deepdream" class="text-dark">Deep Dream</a></td>
+                <td><a href="#artisticstyletransfer" class="text-dark">Artistic Style Transfer</a></td>
+                </tr>
+                <tr>
+                <td><a href="#seasontransfer" class="text-dark">Season Transfer</a></td>
+                <td><a href="#objecttransfiguration" class="text-dark">Object Transfiguration</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
    <!-- Footer -->
