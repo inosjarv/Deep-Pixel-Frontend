@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/generator.css">
     <link rel="icon" href="assets/img/logo_32x32.png" sizes="32x32" type="image/png">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <title>Deep Pixels | Generate</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
                 </li>
                 <li class="nav-item mr-3">
                     <a class="nav-link text-dark" href="./about.html">
-                    <i class="fas fa-user"></i> About Us</a>
+                    <i class="fas fa-user"></i>  About Us</a>
                 </li>
                 <li class="nav-item mr-3">
                     <a class="nav-link text-dark" href="./contact.html">
@@ -49,49 +50,50 @@
     </nav>
 
     <section class="jumbotron text-center jumbotron-color">
-        <div class="file btn btn-lg btn-dark center-block">
+        <div class="file btn btn-lg btn-dark center-block" id="btn-clr">    
 						 <i class="fas fa-upload"></i> Upload Image!
 							<input type="file" id="upload-file-info" class="form-control" name="file"/>
 		</div>
     </section>
 
-    <div class="container">
-       <!--
-            <div class="list-group-horizontal list-group-horizontal-xl">
-            <a href="#" class="list-group-item text-dark">Deep Style Transfer</a>
-            <a href="#" class="list-group-item text-dark">Deep Dream</a>
-            <a href="#" class="list-group-item text-dark">Artistic Style Transfer</a>
-            <div class="w-100"></div>
-            <a href="#" class="list-group-item text-dark">Season Transfer</a>
-            <a href="#" class="list-group-item text-dark">Season Transfer</a>
+    <div class="container" id="middle-nav">
+        <ul class="nav nav-tabs justify-content-md-center" id="myTab" role="tablist">
+                <li class="nav-item active">
+                <a class="nav-link" id="deepstyle-tab" data-toggle="tab" href="#deepstyle" role="tab" aria-controls="deepstyle" aria-selected="true">Deep Style</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="deepdream-tab" data-toggle="tab" href="#deepdream" role="tab" aria-controls="deepdream" aria-selected="false">Deep Dream</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="artisticstyle-tab" data-toggle="tab" href="#artisticstyle" role="tab" aria-controls="artisticstyle" aria-selected="false">Artistic Style</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="seasontransfer-tab" data-toggle="tab" href="#seasontransfer" role="tab" aria-controls="seasontransfer" aria-selected="false">Season Transfer</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="objecttrans-tab" data-toggle="tab" href="#artisticstyle" role="tab" aria-controls="objecttrans" aria-selected="false">Object Transfiguration</a>
+                </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">1</div>
+                <div class="tab-pane fade" id="deepdream" role="tabpanel" aria-labelledby="deepdream-tab">2</div>
+                <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">3</div>
+                <div class="tab-pane fade" id="seasontransfer" role="tabpanel" aria-labelledby="seasontransfer-tab">4</div>
+                <div class="tab-pane fade" id="objecttrans" role="tabpanel" aria-labelledby="objecttrans-tab">5</div>
         </div>
-       --> 
 
-        <table class="table table-bordered">
-
-            <tbody>
-                <tr>
-                <td><a href="#deepstyletransfer" class="text-dark">Deep Style Transfer</a></td>
-                <td><a href="#deepdream" class="text-dark">Deep Dream</a></td>
-                <td><a href="#artisticstyletransfer" class="text-dark">Artistic Style Transfer</a></td>
-                </tr>
-                <tr>
-                <td><a href="#seasontransfer" class="text-dark">Season Transfer</a></td>
-                <td><a href="#objecttransfiguration" class="text-dark">Object Transfiguration</a></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
    <!-- Footer -->
     <footer id="main-footer" class="py-4 bg-light text-dark text-center"> 
         Copyright &copy;
-        <span class="year">Deep Pixels</span>
+        <span class="year"> 2019 </span> Deep Pixels
     </footer>
     
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
