@@ -20,9 +20,11 @@ a:hover{
     color: rgb(33, 37, 41);
     transition: rgb(33, 37, 41) 0.2s, rgb(29, 33, 36) 0.2s;
     font-size: 1.4rem;
+    display: inline-block;
+
   }
   #middle-nav .nav-tabs li > a:hover, #middle-nav .nav-tabs li > a:focus {
-    background-color: rgb(233, 249, 250);
+    background-color: rgb(233, 233, 233);
     color: rgb(33, 37, 41);
   }
   #middle-nav .nav-tabs li.active > a {
@@ -44,5 +46,36 @@ a:hover{
   background-color: #f5f5f5;
 }
 
+.form-group{
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
 
+.card-title{
+  margin:10.5px;
+}
 
+[type=radio] { 
+  position: absolute;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+  opacity: 0.33; /* Webkit Nightlies & Chrome Canary */
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  filter: none;
+  opacity: 1;
+  -webkit-transition: all .8s ease-in-out;  
+}
+
+.style {
+  padding: 6px;
+}
+
+.card {
+  border: none;
+}

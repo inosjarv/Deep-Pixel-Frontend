@@ -49,25 +49,25 @@
         </div>
     </nav>
 
-    <section class="jumbotron text-center jumbotron-color">
+    <div class="jumbotron text-center jumbotron-color">
         <div class="file btn btn-lg btn-dark center-block" id="btn-clr">    
 						 <i class="fas fa-upload"></i> Upload Image!
 							<input type="file" id="upload-file-info" class="form-control" name="file"/>
 		</div>
-    </section>
+    </div>
 
     <div class="container" id="middle-nav">
-        <ul class="nav nav-tabs justify-content-md-center" id="myTab" role="tablist">
-                <li class="nav-item active">
+        <ul class="nav nav-tabs border border-light justify-content-md-center " id="myTab" role="tablist">
+                <li class="nav-item border-right active">
                 <a class="nav-link" id="deepstyle-tab" data-toggle="tab" href="#deepstyle" role="tab" aria-controls="deepstyle" aria-selected="true">Deep Style</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-right">
                 <a class="nav-link" id="deepdream-tab" data-toggle="tab" href="#deepdream" role="tab" aria-controls="deepdream" aria-selected="false">Deep Dream</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-right">
                 <a class="nav-link" id="artisticstyle-tab" data-toggle="tab" href="#artisticstyle" role="tab" aria-controls="artisticstyle" aria-selected="false">Artistic Style</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-right">
                 <a class="nav-link" id="seasontransfer-tab" data-toggle="tab" href="#seasontransfer" role="tab" aria-controls="seasontransfer" aria-selected="false">Season Transfer</a>
                 </li>
                 <li class="nav-item">
@@ -75,7 +75,61 @@
                 </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">1</div>
+                <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">
+                    <form action="" method="GET" class="">
+                            <div class="card card-title form-group">
+                                    <div class="card-body">
+                                      Choose Style
+                                    </div>
+                            </div>
+
+                            <div class="float-left card selected style">
+                                <label>
+                                    <input type="radio" name="styleId" value="1" checked>
+                                    <img src="./assets/img/style/starry_night_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">Starry Night</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card style">
+                                <input type="radio" name="styleId" value="2">
+                                <label>
+                                    <input type="radio" name="styleId" value="2">
+                                    <img src="./assets/img/style/la_muse_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">La Muse</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card style">
+                                <label>
+                                    <input type="radio" name="styleId" value="3">
+                                    <img src="./assets/img/style/rain_princess_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">Rain Princess</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card style">
+                                <label>
+                                    <input type="radio" name="styleId" value="4">
+                                    <img src="./assets/img/style/the_scream_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">The Scream</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card style">
+                                <label>
+                                    <input type="radio" name="styleId" value="5">
+                                    <img src="./assets/img/style/the_shipwreck_of_the_minotaur_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">The Shipwreck</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card style">
+                                <label>
+                                    <input type="radio" name="styleId" value="6">
+                                    <img src="./assets/img/style/udnie_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">Udine</h5>
+                                </label>
+                             </div>  
+                             
+                    </form>
+
+                </div>
                 <div class="tab-pane fade" id="deepdream" role="tabpanel" aria-labelledby="deepdream-tab">2</div>
                 <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">3</div>
                 <div class="tab-pane fade" id="seasontransfer" role="tabpanel" aria-labelledby="seasontransfer-tab">4</div>
