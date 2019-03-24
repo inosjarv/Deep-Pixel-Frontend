@@ -76,10 +76,11 @@
         </ul>
         <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">
-                    <form action="" method="GET" class="">
+                    <form action="" method="GET" class="" id="form-deep-style">
+                        <div>
                             <div class="card card-title form-group">
                                     <div class="card-body">
-                                      Choose Style
+                                        Choose Style
                                     </div>
                             </div>
 
@@ -125,13 +126,47 @@
                                     <img src="./assets/img/style/udnie_200x200.jpg" class="card-img-top">
                                     <h5 class="card-title text-center">Udine</h5>
                                 </label>
-                             </div>  
-                             
-                    </form>
+                            </div> 
+                        </div>
 
+                        <button type="submit" class="submit btn btn-lg btn-dark generator"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>      
+                    </form>
                 </div>
                 <div class="tab-pane fade" id="deepdream" role="tabpanel" aria-labelledby="deepdream-tab">2</div>
-                <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">3</div>
+                <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">
+                    <form action="" method="GET" class="" id="form-artistic-style">
+                        <div>
+                            <div class="card card-title form-group">
+                                    <div class="card-body">
+                                        Choose Artist
+                                    </div>
+                            </div>
+                            <div class="float-left card selected style">
+                                <label>
+                                    <input type="radio" name="artStyle" value="1" checked>
+                                    <img src="./assets/img/artist/claude-monet_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">Monet</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card selected style">
+                                <label>
+                                    <input type="radio" name="artStyle" value="1">
+                                    <img src="./assets/img/artist/vanghogh_200x200.jpg" class="card-img-top">
+                                    <h5 class="card-title text-center">Vincent van Gogh</h5>
+                                </label>
+                            </div>
+                            <div class="float-left card selected style">
+                                <label>
+                                    <input type="radio" name="artStyle" value="1">
+                                    <img src="./assets/img/artist/ukiyoe_200x200.png" class="card-img-top">
+                                    <h5 class="card-title text-center">Ukiyo-e</h5>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit btn btn-lg btn-dark generator"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>
+                    </form>
+                </div>
                 <div class="tab-pane fade" id="seasontransfer" role="tabpanel" aria-labelledby="seasontransfer-tab">4</div>
                 <div class="tab-pane fade" id="objecttrans" role="tabpanel" aria-labelledby="objecttrans-tab">5</div>
         </div>
