@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/generator.css">
     <link rel="icon" href="assets/img/logo_32x32.png" sizes="32x32" type="image/png">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <title>Deep Pixels | Generate</title>
@@ -48,141 +47,148 @@
             </div>
         </div>
     </nav>
-
     <div class="jumbotron text-center jumbotron-color">
-        <div class="file btn btn-lg btn-dark center-block" id="btn-clr">    
-						 <i class="fas fa-upload"></i> Upload Image!
-							<input type="file" id="upload-file-info" class="form-control" name="file"/>
-		</div>
+        <div class="file btn btn-lg btn-dark center-block" id="upload-btn">    
+                        <i class="fas fa-upload"></i> Upload Image!
+                            <input type="file" class="form-control" id="upload-file-info" name="file"/>
+        </div>
     </div>
 
-    <div class="container" id="middle-nav">
-        <ul class="nav nav-tabs border border-light justify-content-md-center " id="myTab" role="tablist">
-                <li class="nav-item border-right active">
-                <a class="nav-link" id="deepstyle-tab" data-toggle="tab" href="#deepstyle" role="tab" aria-controls="deepstyle" aria-selected="true">Deep Style</a>
-                </li>
-                <li class="nav-item border-right">
-                <a class="nav-link" id="deepdream-tab" data-toggle="tab" href="#deepdream" role="tab" aria-controls="deepdream" aria-selected="false">Deep Dream</a>
-                </li>
-                <li class="nav-item border-right">
-                <a class="nav-link" id="artisticstyle-tab" data-toggle="tab" href="#artisticstyle" role="tab" aria-controls="artisticstyle" aria-selected="false">Artistic Style</a>
-                </li>
-                <li class="nav-item border-right">
-                <a class="nav-link" id="seasontransfer-tab" data-toggle="tab" href="#seasontransfer" role="tab" aria-controls="seasontransfer" aria-selected="false">Season Transfer</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" id="objecttrans-tab" data-toggle="tab" href="#objecttrans" role="tab" aria-controls="objecttrans" aria-selected="false">Object Transfiguration</a>
-                </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">
-                    <form action="" method="GET" class="" id="form-deep-style">
-                        <div>
-                            <div class="card card-title form-group">
-                                    <div class="card-body">
-                                        Choose Style
-                                    </div>
-                            </div>
+        <div class="container" id="middle-nav">
+            <ul class="nav nav-tabs border border-light justify-content-md-center " id="myTab" role="tablist">
+                    <li class="nav-item border-right active">
+                    <a class="nav-link" id="deepstyle-tab" data-toggle="tab" href="#deepstyle" role="tab" aria-controls="deepstyle" aria-selected="true">Deep Style</a>
+                    </li>
+                    <li class="nav-item border-right">
+                    <a class="nav-link" id="deepdream-tab" data-toggle="tab" href="#deepdream" role="tab" aria-controls="deepdream" aria-selected="false">Deep Dream</a>
+                    </li>
+                    <li class="nav-item border-right">
+                    <a class="nav-link" id="artisticstyle-tab" data-toggle="tab" href="#artisticstyle" role="tab" aria-controls="artisticstyle" aria-selected="false">Artistic Style</a>
+                    </li>
+                    <li class="nav-item border-right">
+                    <a class="nav-link" id="seasontransfer-tab" data-toggle="tab" href="#seasontransfer" role="tab" aria-controls="seasontransfer" aria-selected="false">Season Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" id="objecttrans-tab" data-toggle="tab" href="#objecttrans" role="tab" aria-controls="objecttrans" aria-selected="false">Object Transfiguration</a>
+                    </li>
+            </ul>
+            <div class="tab-content container" id="myTabContent">
+                    <div class="tab-pane fade show active" id="deepstyle" role="tabpanel" aria-labelledby="deepstyle-tab">
+                        <form action="" method="GET" class="generator-form" id="form-deep-style">
+                            <div>
+                                <div class="card card-title form-group">
+                                        <div class="card-body">
+                                            Choose Style
+                                        </div>
+                                </div>
 
-                            <div class="float-left card selected style">
-                                <label>
-                                    <input type="radio" name="styleId" value="1" checked>
-                                    <img src="./assets/img/style/starry_night_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">Starry Night</h5>
-                                </label>
-                            </div>
-                            <div class="float-left card style">
-                                <input type="radio" name="styleId" value="2">
-                                <label>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="styleId" value="1" checked>
+                                        <img src="./assets/img/style/starry_night_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">Starry Night</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
                                     <input type="radio" name="styleId" value="2">
-                                    <img src="./assets/img/style/la_muse_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">La Muse</h5>
-                                </label>
+                                    <label>
+                                        <input type="radio" name="styleId" value="2">
+                                        <img src="./assets/img/style/la_muse_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">La Muse</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="styleId" value="3">
+                                        <img src="./assets/img/style/rain_princess_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">Rain Princess</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="styleId" value="4">
+                                        <img src="./assets/img/style/the_scream_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">The Scream</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="styleId" value="5">
+                                        <img src="./assets/img/style/the_shipwreck_of_the_minotaur_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">The Shipwreck</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="styleId" value="6">
+                                        <img src="./assets/img/style/udnie_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">Udine</h5>
+                                    </label>
+                                </div> 
                             </div>
-                            <div class="float-left card style">
-                                <label>
-                                    <input type="radio" name="styleId" value="3">
-                                    <img src="./assets/img/style/rain_princess_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">Rain Princess</h5>
-                                </label>
+                            
+                            <div class="generator">
+                                    <button type="submit" class="submit btn btn-lg btn-dark"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>
                             </div>
-                            <div class="float-left card style">
-                                <label>
-                                    <input type="radio" name="styleId" value="4">
-                                    <img src="./assets/img/style/the_scream_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">The Scream</h5>
-                                </label>
-                            </div>
-                            <div class="float-left card style">
-                                <label>
-                                    <input type="radio" name="styleId" value="5">
-                                    <img src="./assets/img/style/the_shipwreck_of_the_minotaur_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">The Shipwreck</h5>
-                                </label>
-                            </div>
-                            <div class="float-left card style">
-                                <label>
-                                    <input type="radio" name="styleId" value="6">
-                                    <img src="./assets/img/style/udnie_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">Udine</h5>
-                                </label>
-                            </div> 
-                        </div>
+                            
 
-                        <button type="submit" class="submit btn btn-lg btn-dark generator"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>      
-                    </form>
-                </div>
-                <div class="tab-pane fade" id="deepdream" role="tabpanel" aria-labelledby="deepdream-tab">2</div>
-                <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">
-                    <form action="" method="GET" class="" id="form-artistic-style">
-                        <div>
-                            <div class="card card-title form-group">
-                                    <div class="card-body">
-                                        Choose Artist
-                                    </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="deepdream" role="tabpanel" aria-labelledby="deepdream-tab">2</div>
+                    <div class="tab-pane fade" id="artisticstyle" role="tabpanel" aria-labelledby="artisticstyle-tab">
+                        <form action="" method="GET" class="generator-form" id="form-artistic-style">
+                            <div>
+                                <div class="card card-title form-group">
+                                        <div class="card-body">
+                                            Choose Artist
+                                        </div>
+                                </div> 
+                                
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="artId" value="1" checked>
+                                        <img src="./assets/img/artist/claude-monet_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">Monet</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="artId" value="2">
+                                        <img src="./assets/img/artist/ukiyoe_200x200.png" class="card-img-top">
+                                        <h5 class="card-title text-center">Ukiyo-e</h5>
+                                    </label>
+                                </div>
+                                <div class="float-left card style">
+                                    <label>
+                                        <input type="radio" name="artId" value="3">
+                                        <img src="./assets/img/artist/vanghogh_200x200.jpg" class="card-img-top">
+                                        <h5 class="card-title text-center">Van Ghogh</h5>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="float-left card selected style">
-                                <label>
-                                    <input type="radio" name="artStyle" value="1" checked>
-                                    <img src="./assets/img/artist/claude-monet_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">Monet</h5>
-                                </label>
-                            </div>
-                            <div class="float-left card selected style">
-                                <label>
-                                    <input type="radio" name="artStyle" value="1">
-                                    <img src="./assets/img/artist/vanghogh_200x200.jpg" class="card-img-top">
-                                    <h5 class="card-title text-center">Vincent van Gogh</h5>
-                                </label>
-                            </div>
-                            <div class="float-left card selected style">
-                                <label>
-                                    <input type="radio" name="artStyle" value="1">
-                                    <img src="./assets/img/artist/ukiyoe_200x200.png" class="card-img-top">
-                                    <h5 class="card-title text-center">Ukiyo-e</h5>
-                                </label>
-                            </div>
+                        <div class="generator">
+                                <button type="submit" class="submit btn btn-lg btn-dark"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>
                         </div>
                         
-                        <button type="submit" class="submit btn btn-lg btn-dark generator"><span>Generate</span> <i class="fa fa-chevron-right"></i></button>
-                    </form>
-                </div>
-                <div class="tab-pane fade" id="seasontransfer" role="tabpanel" aria-labelledby="seasontransfer-tab">4</div>
-                <div class="tab-pane fade" id="objecttrans" role="tabpanel" aria-labelledby="objecttrans-tab">5</div>
-        </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="seasontransfer" role="tabpanel" aria-labelledby="seasontransfer-tab">4</div>
+                    <div class="tab-pane fade" id="objecttrans" role="tabpanel" aria-labelledby="objecttrans-tab">5</div>
+            </div>
 
+        </div>
     </div>
 
-   <!-- Footer -->
-    <footer id="main-footer" class="py-4 bg-light text-dark text-center"> 
-        Copyright &copy;
-        <span class="year"> 2019 </span> Deep Pixels
-    </footer>
-    
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <footer id="main-footer" class="py-4 bg-light text-dark text-center"> 
+            Copyright &copy;
+            <span class="year"> 2019 </span> Deep Pixels
+    </footer>
 
 </body>
 </html>
